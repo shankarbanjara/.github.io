@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banjara Shankar - Welcome to My Portfolio</title>
+  <meta name="description" content="Full-stack developer passionate about creating beautiful, functional web applications." />
+  <meta name="author" content="Banjara Shankar" />
+  <meta name="keywords" content="full stack developer, web developer, portfolio, javascript" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="language-switch">
+        <img src="https://flagcdn.com/us.svg" alt="English" id="en-btn" class="flag" />
+        <img src="https://flagcdn.com/jp.svg" alt="日本語" id="jp-btn" class="flag" />
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <h1 id="title">Hi, I'm Banjara Shankar</h1>
+    <p id="subtitle">
+      Welcome to My Portfolio<br>
+      I’ve been living in Japan since 2016 and have achieved Japanese<br>
+      Language Proficiency Test (JLPT) N1, enabling me to communicate<br>
+      confidently in business settings. I enjoy connecting with people<br>
+      from diverse backgrounds and can speak four languages: Japanese,<br>
+      English, Nepali, and Hindi. Outside of work, I love cooking, driving,<br>
+      traveling, and exploring new things. I’m naturally curious and always<br>
+      eager to learn something new, whether it’s about technology, culture,<br>
+      or everyday life.
+    </p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 id="about-title">About Me</h2>
+    <div class="about-content">
+      <img src="photo.jpg" alt="Banjara Shankar" class="about-photo" />
+      <p id="about-text">
+        I am Banjara. I have been living in Japan since 2016. I joined my company in 2020 and have worked across various fields including system support, monitoring, and development. With a professional approach, I bring expertise and dedication to every task. I have experience development, creating scalable and efficient solutions for businesses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2 id="skills-title">Skills</h2>
+    <div class="skill-list">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Java</span>
+      <span>PHP</span>
+      <span>Python</span>
+      <span>Django</span>
+      <span>AWS</span>
+      <span>Mysql</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 id="projects-title">Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>
+          <strong>Hitachi Solutions Ltd.</strong><br>
+          <i>(Manufacturing Support & Inspection)</i><br>
+          April 2020 – December 2020 | Contract Employee (New Graduate)<br><br>
+          Supported the assembly and quality inspection of home appliances (inspected approx. 700 units/day).<br>
+          Created daily defect statistics and presented quality reports in meetings.<br>
+          Learned the workflow of preparation, assembly, and inspection processes, gaining a full understanding of the manufacturing floor operations.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>
+          <strong>NEC System Ltd.</strong><br>
+          <i>(Ministry of Health V-SYS System Operations Support)</i><br>
+          March 2021 – April 2023<br>
+          Managed user accounts and lifecycle for the V-SYS vaccine management system.<br>
+          Created age-based statistical reports, handled incident response, and monitored WAF security.<br>
+          Worked with Salesforce, Microsoft Teams, and Windows OS environments.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>
+          <strong>Hitachi Systems Ltd.</strong><br>
+          <i>(Internal Web Form Development for Merchants – Short-Term Project)</i><br>
+          May 2023 – August 2023<br><br>
+          Developed internal forms and application pages using AWS Cloud9 and Spring Boot.<br>
+          Worked on both backend and frontend development using Java, HTML, and CSS.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Four</h3>
+        <p>
+          <strong>Teraoka Seiko Co., Ltd.</strong><br>
+          <i>(Payment Terminal Support & Merchant Assistance)</i><br>
+          September 2023 – Present<br>
+          Investigated issues and cancellation data for credit cards, e-money, and QR payments using DynamoDB.<br>
+          Provided phone and email support to merchants in Japanese business communication style.<br>
+          Ensured error-free operations through thorough reporting and confirmation procedures for financial data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 id="contact-title">Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" id="contact-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Banjara Shankar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
