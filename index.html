@@ -3,142 +3,334 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Banjara Shankar - Welcome to My Portfolio</title>
-  <meta name="description" content="Full-stack developer passionate about creating beautiful, functional web applications." />
-  <meta name="author" content="Banjara Shankar" />
-  <meta name="keywords" content="full stack developer, web developer, portfolio, javascript" />
+  <title>Fuzitenbai | Tokyo's Traditional Grocery Marketplace</title>
+  <meta name="description" content="Shop authentic Japanese pantry staples, tea, and seasonal delights from Fuzitenbai, Tokyo's beloved traditional grocery store." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <div class="nav-links">
+  <header class="top-bar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-kana">富士天売</span>
+        <span class="brand-name">Fuzitenbai Market</span>
+      </div>
+      <nav class="nav-links">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#shop">Shop</a>
+        <a href="#seasonal">Seasonal</a>
+        <a href="#story">Our Story</a>
         <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <div class="cart" id="cart-indicator">
+          <span class="cart-count" id="cart-count">0</span>
+          <span>Cart</span>
+        </div>
+        <button class="cta">Join Washoku Club</button>
       </div>
-      <div class="language-switch">
-        <img src="https://flagcdn.com/us.svg" alt="English" id="en-btn" class="flag" />
-        <img src="https://flagcdn.com/jp.svg" alt="日本語" id="jp-btn" class="flag" />
-      </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- Home Section -->
-  <section id="home" class="hero">
-    <h1 id="title">Hi, I'm Banjara Shankar</h1>
-    <p id="subtitle">
-      Welcome to My Portfolio<br>
-      I’ve been living in Japan since 2016 and have achieved Japanese<br>
-      Language Proficiency Test (JLPT) N1, enabling me to communicate<br>
-      confidently in business settings. I enjoy connecting with people<br>
-      from diverse backgrounds and can speak four languages: Japanese,<br>
-      English, Nepali, and Hindi. Outside of work, I love cooking, driving,<br>
-      traveling, and exploring new things. I’m naturally curious and always<br>
-      eager to learn something new, whether it’s about technology, culture,<br>
-      or everyday life.
-    </p>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-subtitle">Tokyo · Nihonbashi</p>
+          <h1>Experience Tokyo's Most Beloved Washoku Pantry</h1>
+          <p>
+            Since 1898, Fuzitenbai has curated the finest shoyu, teas, and artisanal snacks for families across Japan.
+            Shop online now for hand-selected goods delivered fresh from our storefront to your doorstep.
+          </p>
+          <div class="hero-cta">
+            <a href="#shop" class="btn primary">Shop New Arrivals</a>
+            <a href="#story" class="btn ghost">Meet Our Makers</a>
+          </div>
+          <div class="hero-tags">
+            <span>日本全国発送</span>
+            <span>Same-Day Tokyo Delivery</span>
+            <span>Temple-Fair Exclusives</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p class="card-title">This Week's Spotlight</p>
+          <h2>Uji Gyokuro Tea Ceremony Kit</h2>
+          <p class="card-description">
+            Includes hand-fired gyokuro leaves, yuzukosho sweets, bamboo chasen, and a streaming workshop with
+            our in-house tea master.
+          </p>
+          <div class="card-footer">
+            <span class="price">¥8,500</span>
+            <button class="btn secondary">Reserve Set</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2 id="about-title">About Me</h2>
-    <div class="about-content">
-      <img src="photo.jpg" alt="Banjara Shankar" class="about-photo" />
-      <p id="about-text">
-        I am Banjara. I have been living in Japan since 2016. I joined my company in 2020 and have worked across various fields including system support, monitoring, and development. With a professional approach, I bring expertise and dedication to every task. I have experience development, creating scalable and efficient solutions for businesses.
-      </p>
+    <section class="trust">
+      <div class="container trust-grid">
+        <div>
+          <h3>120+ Years in Nihonbashi</h3>
+          <p>Family-run grocer supplying shrines, ryokan, and modern kitchens with heritage ingredients.</p>
+        </div>
+        <div>
+          <h3>Farm-to-Kitchen Logistics</h3>
+          <p>Temperature-controlled delivery across Japan with live order tracking and eco packaging.</p>
+        </div>
+        <div>
+          <h3>Curated by Washoku Masters</h3>
+          <p>Sake sommeliers and kaiseki chefs help select every seasonal ingredient and gift set.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="container shop-header">
+        <div>
+          <p class="eyebrow">Shop</p>
+          <h2>Browse Signature Collections</h2>
+          <p>Discover artisanal pantry staples, conbini favorites, and temple-fair souvenirs in one vibrant marketplace.</p>
+        </div>
+        <div class="filters">
+          <div class="search">
+            <input type="search" id="search-input" placeholder="Search for matcha, miso, senbei..." />
+          </div>
+          <div class="category-tabs" id="category-tabs">
+            <button class="tab active" data-category="all">All</button>
+            <button class="tab" data-category="tea">Tea &amp; Beverages</button>
+            <button class="tab" data-category="snacks">Snacks</button>
+            <button class="tab" data-category="condiments">Condiments</button>
+            <button class="tab" data-category="seasonal">Seasonal Gifts</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="seasonal" class="seasonal">
+      <div class="container seasonal-grid">
+        <div class="seasonal-story">
+          <p class="eyebrow">Seasonal Spotlight</p>
+          <h2>Hinamatsuri Feast Basket</h2>
+          <p>
+            Celebrate Girls' Day with handcrafted chirashi sushi toppings, kinako sweets, and blush-pink amazake brewed
+            exclusively for Fuzitenbai. Every basket includes a keepsake tenugui illustrated by Tokyo artist Aki Sato.
+          </p>
+          <ul>
+            <li>Limited run of 500 baskets worldwide</li>
+            <li>Ships chilled with reusable ice packs</li>
+            <li>Virtual plating class with Chef Kaede</li>
+          </ul>
+          <div class="hero-cta">
+            <button class="btn primary">Preorder ¥12,400</button>
+            <button class="btn ghost">View Festival Recipes</button>
+          </div>
+        </div>
+        <div class="seasonal-gallery">
+          <div class="seasonal-card">
+            <span class="tag">Editor’s Pick</span>
+            <h3>Tsukiji Artisan Soy Set</h3>
+            <p>Includes barrel-aged shoyu, yuzu ponzu, and smoked shio koji for modern tables.</p>
+          </div>
+          <div class="seasonal-card">
+            <span class="tag">春限定</span>
+            <h3>Sakura Mochi Kit</h3>
+            <p>Plum leaf-wrapped mochi with red bean, cherry blossom syrup, and matcha sugar dust.</p>
+          </div>
+          <div class="seasonal-card">
+            <span class="tag">Chef Series</span>
+            <h3>Shinjuku Night Market Bento</h3>
+            <p>Charcoal-grilled yakitori glaze, sansho pepper rice, and izakaya-style sides.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiences">
+      <div class="container experiences-grid">
+        <div>
+          <p class="eyebrow">Virtual Experiences</p>
+          <h2>Stream Live from Tokyo</h2>
+          <p>
+            Join exclusive workshops featuring tea ceremonies, wagashi sculpting, and sake pairings. Every class includes an ingredient kit shipped from Fuzitenbai plus digital recipe cards in English and Japanese.
+          </p>
+          <div class="experiences-meta">
+            <div>
+              <strong>12</strong>
+              <span>Monthly Classes</span>
+            </div>
+            <div>
+              <strong>98%</strong>
+              <span>Guest Satisfaction</span>
+            </div>
+            <div>
+              <strong>4K</strong>
+              <span>Global Attendees</span>
+            </div>
+          </div>
+        </div>
+        <div class="experience-schedule">
+          <div class="experience-card">
+            <p class="date">Mar 3 · 19:00 JST</p>
+            <h3>Matcha &amp; Mochi Pairing Lab</h3>
+            <p>Hosted by tea master Rieko Tanaka with live Q&amp;A translated in English.</p>
+            <button class="btn secondary">Save Seat</button>
+          </div>
+          <div class="experience-card">
+            <p class="date">Mar 10 · 11:00 JST</p>
+            <h3>Sake Cellar Essentials</h3>
+            <p>Explore junmai daiginjo pairings with seasonal otsumami snacks delivered to you.</p>
+            <button class="btn secondary">Book Now</button>
+          </div>
+          <div class="experience-card">
+            <p class="date">Mar 21 · 20:30 JST</p>
+            <h3>Kaiseki Pantry Staples</h3>
+            <p>Learn plating secrets from ryotei chef Hiro Matsuda using Fuzitenbai pantry kits.</p>
+            <button class="btn secondary">Join Waitlist</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voices">
+      <div class="container">
+        <p class="eyebrow">Guest Voices</p>
+        <h2>What Tokyo &amp; Beyond Are Saying</h2>
+        <div class="voice-carousel">
+          <article class="voice-card">
+            <p class="rating">★★★★★</p>
+            <p>
+              “Fuzitenbai delivers the nostalgic flavors of my grandmother’s kitchen with the convenience of next-day delivery.
+              Their packaging is stunning and sustainable.”
+            </p>
+            <span class="author">— Mei, Ginza</span>
+          </article>
+          <article class="voice-card">
+            <p class="rating">★★★★★</p>
+            <p>
+              “The virtual tasting experiences are world-class. We streamed the izakaya course from London and felt like we were in
+              Shinjuku.”
+            </p>
+            <span class="author">— Daniel, London</span>
+          </article>
+          <article class="voice-card">
+            <p class="rating">★★★★☆</p>
+            <p>
+              “Seasonal boxes sell out fast, but the concierge waitlist found a replacement set with exclusive treats. Exceptional
+              service!”
+            </p>
+            <span class="author">— Haruka, Osaka</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="container story-grid">
+        <div>
+          <p class="eyebrow">Our Story</p>
+          <h2>Rooted in Temple Fairs, Evolving for the World</h2>
+          <p>
+            Fuzitenbai began as a humble stall near Kanda Myojin shrine, sourcing pickles and teas for festival-goers. Today we
+            partner with over 200 artisans from Hokkaido to Okinawa, blending timeless hospitality with digital-first service.
+          </p>
+          <p>
+            Visit our flagship store in Nihonbashi to sample small-batch soy sauces, premium nori, and seasonal wagashi. Prefer to shop online? Our concierge team is available 24/7 via chat to recommend the perfect gift or pantry refill.
+          </p>
+        </div>
+        <div class="story-details">
+          <div class="stat-card">
+            <strong>1898</strong>
+            <span>Year Established</span>
+          </div>
+          <div class="stat-card">
+            <strong>200+</strong>
+            <span>Craft Partners</span>
+          </div>
+          <div class="stat-card">
+            <strong>45%</strong>
+            <span>Packaging Recycled</span>
+          </div>
+          <div class="stat-card">
+            <strong>24/7</strong>
+            <span>Concierge Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership">
+      <div class="container membership-grid">
+        <div>
+          <p class="eyebrow">Washoku Club</p>
+          <h2>Membership Designed for Tokyo Food Lovers</h2>
+          <ul>
+            <li>¥1,200 welcome credit toward your first order</li>
+            <li>Curated “omiyage” drops shipped monthly</li>
+            <li>Priority booking for live tastings and chef tables</li>
+            <li>Exclusive partner perks with ryokan and tea houses</li>
+          </ul>
+        </div>
+        <form class="signup" id="membership-form">
+          <label for="member-email">Receive launch updates:</label>
+          <input type="email" id="member-email" placeholder="you@example.com" required />
+          <button type="submit" class="btn primary">Request Invitation</button>
+          <p class="form-feedback" id="membership-feedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <span class="brand-kana">富士天売</span>
+        <h3>Fuzitenbai Market</h3>
+        <p>2-12-5 Nihonbashi, Chuo-ku, Tokyo 103-0027</p>
+        <p>Daily 9:00–21:00 JST · +81-3-5555-1122</p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Concierge Chat</a></li>
+          <li><a href="#">Return Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LINE</a></li>
+          <li><a href="#">WeChat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Be first to hear about artisan collaborations and city pop-up events.</p>
+        <form class="newsletter" id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="hello@domain.com" required />
+          <button type="submit" class="btn secondary">Subscribe</button>
+          <p class="form-feedback" id="newsletter-feedback" role="status"></p>
+        </form>
+      </div>
     </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2 id="skills-title">Skills</h2>
-    <div class="skill-list">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Java</span>
-      <span>PHP</span>
-      <span>Python</span>
-      <span>Django</span>
-      <span>AWS</span>
-      <span>Mysql</span>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2 id="projects-title">Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>
-          <strong>Hitachi Solutions Ltd.</strong><br>
-          <i>(Manufacturing Support & Inspection)</i><br>
-          April 2020 – December 2020 | Contract Employee (New Graduate)<br><br>
-          Supported the assembly and quality inspection of home appliances (inspected approx. 700 units/day).<br>
-          Created daily defect statistics and presented quality reports in meetings.<br>
-          Learned the workflow of preparation, assembly, and inspection processes, gaining a full understanding of the manufacturing floor operations.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>
-          <strong>NEC System Ltd.</strong><br>
-          <i>(Ministry of Health V-SYS System Operations Support)</i><br>
-          March 2021 – April 2023<br>
-          Managed user accounts and lifecycle for the V-SYS vaccine management system.<br>
-          Created age-based statistical reports, handled incident response, and monitored WAF security.<br>
-          Worked with Salesforce, Microsoft Teams, and Windows OS environments.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Project Three</h3>
-        <p>
-          <strong>Hitachi Systems Ltd.</strong><br>
-          <i>(Internal Web Form Development for Merchants – Short-Term Project)</i><br>
-          May 2023 – August 2023<br><br>
-          Developed internal forms and application pages using AWS Cloud9 and Spring Boot.<br>
-          Worked on both backend and frontend development using Java, HTML, and CSS.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Project Four</h3>
-        <p>
-          <strong>Teraoka Seiko Co., Ltd.</strong><br>
-          <i>(Payment Terminal Support & Merchant Assistance)</i><br>
-          September 2023 – Present<br>
-          Investigated issues and cancellation data for credit cards, e-money, and QR payments using DynamoDB.<br>
-          Provided phone and email support to merchants in Japanese business communication style.<br>
-          Ensured error-free operations through thorough reporting and confirmation procedures for financial data.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2 id="contact-title">Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit" id="contact-button">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Banjara Shankar. All rights reserved.</p>
+    <p class="footer-note">© 2025 Fuzitenbai Market. Crafted in Tokyo for the world.</p>
   </footer>
+
+  <div class="cart-panel" id="cart-panel" aria-live="polite">
+    <h3>Cart Preview</h3>
+    <ul id="cart-items"></ul>
+    <div class="cart-summary">
+      <span>Total</span>
+      <strong id="cart-total">¥0</strong>
+    </div>
+    <button class="btn primary full">Checkout</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
